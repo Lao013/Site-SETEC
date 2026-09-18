@@ -2,6 +2,8 @@
    CONFIGURAÇÕES GERAIS
 ================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,12 +16,40 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #470e66;
+    
     color: white;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+     background:
+         radial-gradient(
+            circle at 5% 15%,
+            rgba(180, 40, 255, 0.65),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 95% 50%,
+            rgba(150, 20, 255, 0.55),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(100, 20, 180, 0.35),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #13001f 0%,
+            #26003d 45%,
+            #12001e 100%
+        );
 }
+
+
 
 a {
     text-decoration: none;
@@ -63,6 +93,7 @@ a {
 ================================ */
 
 .nav-logo {
+    position: relative;
     display: block;
 
     color: white;
@@ -73,9 +104,46 @@ a {
     padding: 12px 20px;
     border-radius: 15px;
 
-    background-color: #470e66;
-
     white-space: nowrap;
+}
+
+.nav-logo::before,
+.nav-logo::after {
+    content: "";
+    position: absolute;
+
+    width: 60px;
+    height: 1px;
+
+    top: 50%;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #c589e6,
+        transparent
+    );
+
+    box-shadow: 0 0 8px #c589e6;
+}
+
+.nav-logo::before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.nav-logo::after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+.setec-2026 {
+    font-family: "Russo One", sans-serif;
+}
+
+.barra {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 
@@ -113,11 +181,16 @@ a {
     justify-content: center;
 }
 
+.nav-item:hover{
+    opacity: 0.6;
+
+}
+
 .nav-link {
     display: block;
 
     color: white;
-    background-color: #470e66;
+    background-color: #4b075f;
 
     font-size: 15px;
     font-weight: bold;
@@ -131,13 +204,13 @@ a {
 }
 
 
+
 /* ================================
    LINK ATIVO
 ================================ */
 
 .nav-link.active,
 .nav-logo.active {
-    background-color: #470e66;
     color: white;
 }
 
@@ -168,9 +241,6 @@ h3 {
     text-align: center;
 }
 
-h1 {
-    margin-bottom: 30px;
-}
 
 h2 {
     margin-top: 35px;
@@ -180,6 +250,64 @@ h2 {
 h3 {
     margin-top: 25px;
     margin-bottom: 15px;
+}
+
+.titulo{
+    font-family: "Russo One", sans-serif;
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+
+.semana{
+    color:#c589e6;
+}
+
+.programacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    margin-top: 80px;
+    margin-bottom: 0px;
+}
+
+.programacao::before,
+.programacao::after {
+    content: "";
+    width: 180px;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #c589e6,
+        transparent
+    );
+
+    box-shadow: 0 0 8px #c589e6;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-programacao {
+    text-align: center;
+}
+
+.img {
+    position: absolute;
+    right: 10px;
+
+    width: 300px;
+    height: auto;
 }
 
 
@@ -195,11 +323,14 @@ h3 {
 
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
 
     background-color: #470e66;
 
-    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    
 }
 
 th,
@@ -222,6 +353,19 @@ td {
     color: white;
 }
 
+.dia-titulo{
+    background-color: #691a93;
+    border-radius: 10px;
+}
+
+th i {
+    color: #c589e6;
+    margin-right: 8px;
+}
+
+.primeiro-dia{
+    margin-top: 0px;
+}
 
 /* ================================
    RODAPÉ
@@ -290,6 +434,14 @@ footer img {
         font-size: 14px;
         padding: 10px 13px;
     }
+
+    .img{
+        display: none;
+    }
+
+    .titulo{
+        font-size: 55px;
+    }
 }
 
 
@@ -336,6 +488,14 @@ footer img {
     td {
         padding: 9px;
     }
+
+    .img{
+        display: none;
+    }
+
+    .titulo{
+        font-size: 55px;
+    }
 }
 
 
@@ -368,5 +528,13 @@ footer img {
 
     footer {
         padding: 25px 10px;
+    }
+
+    .img{
+        display: none;
+    }
+
+    .titulo{
+        font-size: 50px;
     }
 }
