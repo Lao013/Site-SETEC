@@ -7,7 +7,7 @@
 
     <title>SETEC 2026 - FATEC SOROCABA</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style-index.css">
 
     <meta name="author" content="Ágatha Cristina, Júlia Ribeiro, Guilherme Lao">
     <meta name="description" content="Site SETEC 2026, evento da FATEC de Sorocaba/SP">
@@ -23,7 +23,7 @@
 
             <div>
                 <a href="index.html" class="nav-logo active">
-                    SETEC 2026 - FATEC Sorocaba/SP
+                    <span class="setec-2026">SETEC 2026 </span> <span class="barra">|</span>FATEC Sorocaba/SP
                 </a>
             </div>
 
@@ -31,50 +31,28 @@
 
                 <ul class="nav-list">
 
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">
+                    <li class="dropdown">
+                        <a href="./index.html" class="nav-link" id="dropdown">
                             Programação
                         </a>
+
+                        <div class="dropdown-menu">
+                            <a href="#dia05" class="nav-link">05/10</a>
+                            <a href="#dia06" class="nav-link">06/10</a>
+                            <a href="#dia07" class="nav-link">07/10</a>
+                            <a href="#dia08" class="nav-link">08/10</a>
+                            <a href="#dia09" class="nav-link">09/10</a>
+                        </div>
                     </li>
 
                     <li class="nav-item">
-                        <a href="index.html#dia05" class="nav-link">
-                            05/10
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="index.html#dia06" class="nav-link">
-                            06/10
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="index.html#dia07" class="nav-link">
-                            07/10
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="index.html#dia08" class="nav-link">
-                            08/10
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="index.html#dia09" class="nav-link">
-                            09/10
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="palestrantes.html" class="nav-link">
+                        <a href="#inicio" class="nav-link" id="link-atual">
                             Palestrantes
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="equipe.html" class="nav-link">
+                        <a href="./equipe.html" class="nav-link">
                             Equipe
                         </a>
                     </li>
