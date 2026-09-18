@@ -16,31 +16,27 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    
     color: white;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 
-     background:
-         radial-gradient(
+    background:
+        radial-gradient(
             circle at 5% 15%,
             rgba(180, 40, 255, 0.65),
             transparent 25%
         ),
-
         radial-gradient(
             circle at 95% 50%,
             rgba(150, 20, 255, 0.55),
             transparent 25%
         ),
-
         radial-gradient(
             circle at 50% 100%,
             rgba(100, 20, 180, 0.35),
             transparent 40%
         ),
-
         linear-gradient(
             135deg,
             #13001f 0%,
@@ -48,8 +44,6 @@ body {
             #12001e 100%
         );
 }
-
-
 
 a {
     text-decoration: none;
@@ -64,8 +58,14 @@ a {
 .header-1 {
     width: 100%;
     background-color: #691a93;
-    position: relative;
+
+    /* MENU FIXO */
+    position: fixed;
+    top: 0;
+    left: 0;
+
     z-index: 1000;
+
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -78,11 +78,13 @@ a {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
+
     padding: 15px 25px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -94,14 +96,18 @@ a {
 
 .nav-logo {
     position: relative;
+
     display: block;
 
     color: white;
+
     font-size: 24px;
     font-weight: bold;
+
     text-align: center;
 
     padding: 12px 20px;
+
     border-radius: 15px;
 
     white-space: nowrap;
@@ -110,6 +116,7 @@ a {
 .nav-logo::before,
 .nav-logo::after {
     content: "";
+
     position: absolute;
 
     width: 60px;
@@ -153,6 +160,7 @@ a {
 
 .nav-menu {
     width: 100%;
+
     display: flex;
     justify-content: center;
 }
@@ -165,6 +173,7 @@ a {
     align-items: center;
 
     flex-wrap: wrap;
+
     gap: 10px;
 
     width: 100%;
@@ -181,19 +190,20 @@ a {
     justify-content: center;
 }
 
-.nav-item:hover{
+.nav-item:hover {
     opacity: 0.6;
-
 }
 
 .nav-link {
     display: block;
 
     color: white;
+
     background-color: #4b075f;
 
     font-size: 15px;
     font-weight: bold;
+
     text-align: center;
 
     padding: 11px 16px;
@@ -202,7 +212,6 @@ a {
 
     min-width: 85px;
 }
-
 
 
 /* ================================
@@ -222,9 +231,15 @@ a {
 main {
     width: 100%;
     max-width: 1400px;
+
     margin: 0 auto;
 
-    padding: 40px 25px;
+    /*
+       Espaço reservado para o menu fixo.
+       Evita que o conteúdo fique escondido
+       atrás do cabeçalho.
+    */
+    padding: 190px 25px 40px;
 
     flex: 1;
 }
@@ -241,7 +256,6 @@ h3 {
     text-align: center;
 }
 
-
 h2 {
     margin-top: 35px;
     margin-bottom: 20px;
@@ -252,20 +266,22 @@ h3 {
     margin-bottom: 15px;
 }
 
-.titulo{
+.titulo {
     font-family: "Russo One", sans-serif;
     font-size: 60px;
     margin-bottom: 0px;
 }
 
-.semana{
-    color:#c589e6;
+.semana {
+    color: #c589e6;
 }
 
 .programacao {
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     gap: 30px;
 
     margin-top: 80px;
@@ -275,6 +291,7 @@ h3 {
 .programacao::before,
 .programacao::after {
     content: "";
+
     width: 180px;
     height: 1px;
 
@@ -290,10 +307,12 @@ h3 {
 
 .hero {
     position: relative;
+
     width: 100%;
     min-height: 350px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 }
@@ -304,6 +323,7 @@ h3 {
 
 .img {
     position: absolute;
+
     right: 10px;
 
     width: 300px;
@@ -315,27 +335,30 @@ h3 {
    ÁREA DE TABELAS
 ================================ */
 
-.table-container {
+.tabela-container {
     width: 100%;
+
     overflow-x: auto;
+
     margin-bottom: 40px;
 }
 
 table {
     width: 100%;
+
     border-collapse: separate;
     border-spacing: 0;
 
     background-color: #470e66;
 
     border-radius: 12px;
+
     overflow: hidden;
-    
 }
 
 th,
 td {
-    border: 1px solid  #691a93;
+    border: 1px solid #691a93;
 
     padding: 12px;
 
@@ -344,8 +367,10 @@ td {
 }
 
 th {
-    background-color:  #691a93;
+    background-color: #691a93;
+
     color: white;
+
     font-weight: bold;
 }
 
@@ -353,19 +378,37 @@ td {
     color: white;
 }
 
-.dia-titulo{
+.dia-titulo {
     background-color: #691a93;
+
     border-radius: 10px;
 }
 
 th i {
     color: #c589e6;
+
     margin-right: 8px;
 }
 
-.primeiro-dia{
+.primeiro-dia {
     margin-top: 0px;
 }
+
+
+/* ================================
+   AJUSTE DOS LINKS DAS SEÇÕES
+================================ */
+
+/*
+   Quando clicar em 05/10, 06/10 etc.,
+   a seção não ficará escondida atrás
+   do menu fixo.
+*/
+
+.dia {
+    scroll-margin-top: 190px;
+}
+
 
 /* ================================
    RODAPÉ
@@ -374,7 +417,7 @@ th i {
 footer {
     width: 100%;
 
-    background-color:  #691a93;
+    background-color: #691a93;
 
     color: white;
 
@@ -387,7 +430,9 @@ footer {
 
 #footer-title {
     font-size: 16px;
+
     line-height: 1.5;
+
     margin-bottom: 20px;
 }
 
@@ -398,6 +443,7 @@ footer {
 
 footer a {
     display: inline-block;
+
     margin: 8px;
 }
 
@@ -408,6 +454,7 @@ footer img {
     object-fit: contain;
 
     background-color: white;
+
     border-radius: 12px;
 }
 
@@ -435,26 +482,44 @@ footer img {
         padding: 10px 13px;
     }
 
-    .img{
+    .img {
         display: none;
     }
 
-    .titulo{
+    .titulo {
         font-size: 55px;
+    }
+
+    /*
+       O menu pode ficar um pouco maior
+       em telas menores.
+    */
+    main {
+        padding-top: 190px;
+    }
+
+    .dia {
+        scroll-margin-top: 190px;
     }
 }
 
+/* ================================
+   TABLETS / CELULARES
+================================ */
 
 @media screen and (max-width: 700px) {
 
     .nav {
         flex-direction: column;
+
         padding: 15px 10px;
     }
 
     .nav-logo {
         width: 100%;
+
         white-space: normal;
+
         font-size: 20px;
     }
 
@@ -464,20 +529,30 @@ footer img {
 
     .nav-list {
         width: 100%;
+
         display: grid;
+
         grid-template-columns: repeat(2, 1fr);
+
         gap: 8px;
     }
 
     .nav-link {
         width: 100%;
+
         min-width: 0;
+
         font-size: 14px;
+
         padding: 10px 8px;
     }
 
     main {
-        padding: 30px 15px;
+        padding: 280px 15px 30px;
+    }
+
+    .dia {
+        scroll-margin-top: 280px;
     }
 
     table {
@@ -489,15 +564,19 @@ footer img {
         padding: 9px;
     }
 
-    .img{
+    .img {
         display: none;
     }
 
-    .titulo{
+    .titulo {
         font-size: 55px;
     }
 }
 
+
+/* ================================
+   CELULARES PEQUENOS
+================================ */
 
 @media screen and (max-width: 450px) {
 
@@ -514,7 +593,11 @@ footer img {
     }
 
     main {
-        padding: 25px 10px;
+        padding: 400px 10px 25px;
+    }
+
+    .dia {
+        scroll-margin-top: 400px;
     }
 
     table {
@@ -530,11 +613,11 @@ footer img {
         padding: 25px 10px;
     }
 
-    .img{
+    .img {
         display: none;
     }
 
-    .titulo{
+    .titulo {
         font-size: 50px;
     }
 }
