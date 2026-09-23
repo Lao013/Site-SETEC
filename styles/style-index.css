@@ -490,14 +490,11 @@ footer a {
 }
 
 footer img {
-    width: 70px;
-    height: 70px;
-
+    width: 200px;
+    height: 200px;
     object-fit: contain;
-
-    background-color: white;
-
-    border-radius: 12px;
+    border-radius: 20px;
+    background-color: #13001f;
 }
 
 /* ================================
