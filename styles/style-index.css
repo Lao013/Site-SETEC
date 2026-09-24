@@ -490,12 +490,35 @@ footer a {
     margin: 8px;
 }
 
+.hanna{
+    width: auto;
+    height: 60px;
+}
+
+.rubeus{
+    width: auto;
+    height: 35px;
+    position: relative;
+    bottom: 7px;
+}
+
+.itix{
+    width: auto;
+    height: 60px;
+    position: relative;
+    top: 8.5px;
+}
+
+.gft{
+    width: auto;
+    height: 55px;
+    position: relative;
+    top: 8.5px;
+}
 footer img {
-    width: 200px;
-    height: 200px;
+    width: auto;
+    height: 40px;
     object-fit: contain;
-    border-radius: 20px;
-    background-color: #13001f;
 }
 
 
