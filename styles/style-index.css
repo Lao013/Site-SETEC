@@ -207,8 +207,8 @@ a {
     min-width: 85px;
 }
 
-#link-atual {
-    border: white solid 2px;
+.link-selecionado {
+    border: white solid 1px;
 }
 
 /* ================================
@@ -256,6 +256,7 @@ a {
     background-color: #7a2394;
     border-bottom: none !important;
 }
+
 
 
 /* ================================
