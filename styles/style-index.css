@@ -515,6 +515,22 @@ footer a {
     position: relative;
     top: 8.5px;
 }
+
+.heme{
+    height: auto;
+    width: 50px;
+}
+
+.pepper{
+    height: auto;
+    width: 70px;
+}
+
+.licao{
+    height: auto;
+    width: 55px;
+}
+
 footer img {
     width: auto;
     height: 40px;
