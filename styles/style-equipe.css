@@ -1,451 +1,11 @@
 /* ================================
-   CONFIGURAÇÕES GERAIS
-================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-
-    background:
-        radial-gradient(
-            circle at 5% 15%,
-            rgba(180, 40, 255, 0.65),
-            transparent 25%
-        ),
-        radial-gradient(
-            circle at 95% 50%,
-            rgba(150, 20, 255, 0.55),
-            transparent 25%
-        ),
-        radial-gradient(
-            circle at 50% 100%,
-            rgba(100, 20, 180, 0.35),
-            transparent 40%
-        ),
-        linear-gradient(
-            135deg,
-            #13001f 0%,
-            #26003d 45%,
-            #12001e 100%
-        );
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-/* ================================
-   CABEÇALHO
-================================ */
-
-.header-1 {
-    width: 100%;
-    background-color: #691a93;
-
-    /* MENU FIXO */
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-}
-
-
-/* ================================
-   CONTAINER DO MENU
-================================ */
-
-.nav {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    box-sizing: border-box;
-
-    padding: 15px 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-
-/* ================================
-   LOGO / TÍTULO
-================================ */
-
-.nav-logo {
-    position: relative;
-    display: block;
-
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-
-    padding: 12px 20px;
-    border-radius: 15px;
-
-    white-space: nowrap;
-}
-
-.nav-logo::before,
-.nav-logo::after {
-    content: "";
-
-    position: absolute;
-
-    width: 60px;
-    height: 1px;
-    top: 50%;
-
-    background: linear-gradient(
-        to right,
-        transparent,
-        #c589e6,
-        transparent
-    );
-
-    box-shadow: 0 0 8px #c589e6;
-}
-
-.nav-logo::before {
-    right: 100%;
-    margin-right: 15px;
-}
-
-.nav-logo::after {
-    left: 100%;
-    margin-left: 15px;
-}
-
-.setec-2026 {
-    font-family: "Russo One", sans-serif;
-}
-
-.barra {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-
-/* ================================
-   MENU
-================================ */
-
-.nav-menu {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.nav-list {
-    list-style: none;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    gap: 10px;
-    width: 100%;
-}
-
-
-/* ================================
-   ITENS DO MENU
-================================ */
-
-.nav-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.nav-link:hover {
-    background-color: #7a2394;
-}
-
-.nav-link {
-    display: block;
-
-    color: white;
-    background-color: #4b075f;
-
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-
-    padding: 11px 16px;
-    border-radius: 12px;
-
-    min-width: 85px;
-}
-
-.link-selecionado {
-    border: white solid 1px;
-}
-
-
-/* ================================
-   PROGRAMAÇÃO MENU DROPDOWN
-================================ */
-
-.dropdown {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.dropdown-menu a:hover {
-    background-color: #7a2394;
-}
-
-.dropdown-menu {
-    display: none;
-
-    position: absolute;
-    top: 100%;
-    z-index: 100;
-
-    width: 100%;
-}
-
-.dropdown-menu a {
-    display: block;
-
-    border: none;
-    border-radius: 0;
-}
-
-.dropdown-menu a:last-child {
-    border-radius: 0 0 12px 12px !important;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown:hover #dropdown {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-
-    background-color: #7a2394;
-    border-bottom: none !important;
-}
-
-
-/* ================================
-   LINK ATIVO
-================================ */
-
-.nav-link.active,
-.nav-logo.active {
-    color: white;
-}
-
-
-/* ================================
-   CONTEÚDO
-================================ */
-
-main {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-
-    /*
-       Espaço reservado para o menu fixo.
-       Evita que o conteúdo fique escondido
-       atrás do cabeçalho.
-    */
-
-    padding: 190px 25px 40px;
-
-    flex: 1;
-}
-
-
-/* ================================
-   TÍTULOS
-================================ */
-
-h1,
-h2,
-h3 {
-    color: white;
-    text-align: center;
-}
-
-h2 {
-    margin-top: 35px;
-    margin-bottom: 20px;
-}
-
-h3 {
-    margin-top: 25px;
-    margin-bottom: 15px;
-}
-
-.titulo {
-    font-family: "Russo One", sans-serif;
-    font-size: 60px;
-    margin-bottom: 0;
-}
-
-.semana {
-    color: #c589e6;
-}
-
-.programacao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 30px;
-
-    margin-top: 80px;
-    margin-bottom: 0;
-}
-
-.programacao::before,
-.programacao::after {
-    content: "";
-
-    width: 180px;
-    height: 1px;
-
-    background: linear-gradient(
-        to right,
-        transparent,
-        #c589e6,
-        transparent
-    );
-
-    box-shadow: 0 0 8px #c589e6;
-}
-
-.inicio {
-    position: relative;
-
-    width: 100%;
-    min-height: 350px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.titulo-programacao {
-    text-align: center;
-}
-
-.img {
-    position: absolute;
-    right: 10px;
-
-    width: 300px;
-    height: auto;
-}
-
-
-/* ================================
-   ÁREA DE TABELAS
-================================ */
-
-.tabela-container {
-    width: 100%;
-    overflow-x: auto;
-    margin-bottom: 40px;
-}
-
-table {
-    width: 100%;
-
-    border-collapse: separate;
-    border-spacing: 0;
-
-    background-color: #470e66;
-
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-th,
-td {
-    border: 1px solid #691a93;
-
-    padding: 12px;
-
-    text-align: center;
-    vertical-align: middle;
-}
-
-th {
-    background-color: #691a93;
-    color: white;
-    font-weight: bold;
-}
-
-td {
-    color: white;
-}
-
-.dia-titulo {
-    background-color: #691a93;
-    border-radius: 10px;
-}
-
-th i {
-    color: #c589e6;
-    margin-right: 8px;
-}
-
-.primeiro-dia {
-    margin-top: 0;
-}
-
-
-/* ================================
-   AJUSTE DOS LINKS DAS SEÇÕES
-================================ */
-
-.dia {
-    scroll-margin-top: 190px;
-}
-
-
-/* ================================
    EQUIPE SETEC
 ================================ */
 
 .equipe-setec {
     width: 100%;
     max-width: 1200px;
-
     margin: 0 auto;
-
     padding: 20px 0 50px;
 }
 
@@ -455,24 +15,22 @@ th i {
 ================================ */
 
 .titulo-equipe {
-    text-align: center;
+    width: 100%;
     margin-bottom: 45px;
 }
 
 .titulo-equipe h1 {
     font-family: "Russo One", sans-serif;
-
-    font-size: 42px;
-
-    margin-bottom: 12px;
-
-    text-shadow: 0 0 12px rgba(197, 137, 230, 0.5);
+    font-size: 60px;
+    color: #c589e6;
+    margin: 0;
+    text-align: center;
 }
 
 .titulo-equipe p {
     color: #d8bce7;
-
     font-size: 16px;
+    text-align: center;
 }
 
 
@@ -493,11 +51,8 @@ th i {
 
 .semestre {
     background: rgba(71, 14, 102, 0.8);
-
     border: 1px solid rgba(197, 137, 230, 0.25);
-
     border-radius: 18px;
-
     overflow: hidden;
 
     box-shadow:
@@ -527,7 +82,6 @@ th i {
 
 .semestre summary {
     width: 100%;
-
     padding: 22px 25px;
 
     display: flex;
@@ -546,7 +100,6 @@ th i {
     font-size: 18px;
 
     cursor: pointer;
-
     list-style: none;
 
     transition: background 0.3s ease;
@@ -581,9 +134,7 @@ th i {
 
 .seta {
     font-family: Arial, Helvetica, sans-serif;
-
     font-size: 24px;
-
     line-height: 1;
 
     transition: transform 0.3s ease;
@@ -603,9 +154,7 @@ th i {
 
 .integrantes {
     display: grid;
-
     gap: 15px;
-
     padding: 20px;
 
     animation: aparecer 0.3s ease;
@@ -617,7 +166,6 @@ th i {
 ================================ */
 
 @keyframes aparecer {
-
     from {
         opacity: 0;
         transform: translateY(-8px);
@@ -627,7 +175,6 @@ th i {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
 
@@ -637,7 +184,6 @@ th i {
 
 .turno {
     padding: 18px;
-
     border-radius: 12px;
 
     transition:
@@ -656,9 +202,7 @@ th i {
 
 .turno h3 {
     margin: 0 0 15px;
-
     font-size: 16px;
-
     text-align: left;
 }
 
@@ -670,9 +214,7 @@ th i {
 
 .turno li {
     margin-bottom: 8px;
-
     line-height: 1.45;
-
     color: white;
 }
 
@@ -687,7 +229,6 @@ th i {
 
 .turno.manha {
     background: rgba(229, 185, 63, 0.12);
-
     border-left: 5px solid #e5b93f;
 
     box-shadow:
@@ -705,7 +246,6 @@ th i {
 
 .turno.noite {
     background: rgba(112, 85, 181, 0.18);
-
     border-left: 5px solid #8d70d1;
 
     box-shadow:
@@ -718,238 +258,34 @@ th i {
 
 
 /* ================================
-   RODAPÉ
-================================ */
-
-footer {
-    width: 100%;
-
-    background-color: #691a93;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 30px 20px;
-
-    margin-top: auto;
-}
-
-#footer-title {
-    font-size: 16px;
-
-    line-height: 1.5;
-
-    margin-bottom: 20px;
-}
-
-
-/* ================================
-   GITHUB / APOIADORES
-================================ */
-
-footer a {
-    display: inline-block;
-    margin: 8px;
-}
-
-.hanna {
-    width: auto;
-    height: 60px;
-}
-
-.rubeus {
-    width: auto;
-    height: 35px;
-
-    position: relative;
-    bottom: 7px;
-}
-
-.itix {
-    width: auto;
-    height: 60px;
-
-    position: relative;
-    top: 8.5px;
-}
-
-.gft {
-    width: auto;
-    height: 55px;
-
-    position: relative;
-    top: 8.5px;
-}
-
-.heme {
-    height: auto;
-    width: 50px;
-}
-
-.pepper {
-    height: auto;
-    width: 70px;
-}
-
-.licao {
-    height: auto;
-    width: 55px;
-}
-
-footer img {
-    width: auto;
-    height: 40px;
-
-    object-fit: contain;
-}
-
-
-/* ================================
    RESPONSIVIDADE
 ================================ */
 
 @media screen and (max-width: 1000px) {
 
-    .nav {
-        padding: 15px;
-    }
-
-    .nav-logo {
-        font-size: 21px;
-    }
-
-    .nav-list {
-        gap: 8px;
-    }
-
-    .nav-link {
-        font-size: 14px;
-        padding: 10px 13px;
-    }
-
-    .img {
-        display: none;
-    }
-
-    .titulo {
-        font-size: 55px;
-    }
-
-    /*
-       O menu pode ficar um pouco maior
-       em telas menores.
-    */
-
-    main {
-        padding-top: 190px;
-    }
-
-    .dia {
-        scroll-margin-top: 190px;
-    }
-
-
-    /* EQUIPE SETEC */
-
-    .semestres-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     .titulo-equipe h1 {
-        font-size: 36px;
+        font-size: 55px;
     }
 }
 
 
-/* ================================
-   TABLETS / CELULARES
-================================ */
-
 @media screen and (max-width: 700px) {
-
-    .nav {
-        flex-direction: column;
-
-        padding: 15px 10px;
-    }
-
-    .nav-logo {
-        width: 100%;
-
-        white-space: normal;
-
-        font-size: 20px;
-    }
-
-    .nav-menu {
-        width: 100%;
-    }
-
-    .nav-list {
-        width: 100%;
-
-        display: grid;
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 8px;
-    }
-
-    .nav-link {
-        width: 100%;
-
-        min-width: 0;
-
-        font-size: 14px;
-
-        padding: 10px 8px;
-    }
-
-    main {
-        padding: 280px 15px 30px;
-    }
-
-    .dia {
-        scroll-margin-top: 280px;
-    }
-
-    table {
-        font-size: 13px;
-    }
-
-    th,
-    td {
-        padding: 9px;
-    }
-
-    .img {
-        display: none;
-    }
-
-    .titulo {
-        font-size: 55px;
-    }
-
-
-    /* EQUIPE SETEC */
 
     .equipe-setec {
         padding-top: 10px;
     }
 
-    .semestres-grid {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-    }
-
     .titulo-equipe h1 {
-        font-size: 30px;
+        font-size: 45px;
     }
 
     .titulo-equipe p {
         font-size: 14px;
+    }
+
+    .semestres-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .semestre summary {
@@ -958,62 +294,14 @@ footer img {
 }
 
 
-/* ================================
-   CELULARES PEQUENOS
-================================ */
-
 @media screen and (max-width: 450px) {
-
-    .nav-list {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-logo {
-        font-size: 18px;
-    }
-
-    .nav-link {
-        font-size: 14px;
-    }
-
-    main {
-        padding: 400px 10px 25px;
-    }
-
-    .dia {
-        scroll-margin-top: 400px;
-    }
-
-    table {
-        font-size: 12px;
-    }
-
-    th,
-    td {
-        padding: 7px;
-    }
-
-    footer {
-        padding: 25px 10px;
-    }
-
-    .img {
-        display: none;
-    }
-
-    .titulo {
-        font-size: 50px;
-    }
-
-
-    /* EQUIPE SETEC */
 
     .titulo-equipe {
         margin-bottom: 30px;
     }
 
     .titulo-equipe h1 {
-        font-size: 25px;
+        font-size: 38px;
     }
 
     .titulo-equipe p {
@@ -1022,7 +310,6 @@ footer img {
 
     .semestre summary {
         padding: 18px;
-
         font-size: 16px;
     }
 
