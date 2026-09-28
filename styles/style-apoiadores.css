@@ -1,0 +1,270 @@
+/* ================================
+   PÁGINA DE APOIADORES
+================================ */
+
+.apoiadores {
+    width: 100%;
+}
+
+
+/* ================================
+   TÍTULO
+================================ */
+
+.titulo-apoiadores {
+    font-family: "Russo One", sans-serif;
+
+    font-size: 60px;
+
+    color: #c589e6;
+
+    margin: 0;
+
+    text-align: center;
+}
+
+
+
+/* ================================
+   APOIADORES EM DESTAQUE
+================================ */
+
+.apoiadores-destaques {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+}
+
+
+/* ================================
+   DEMAIS APOIADORES
+================================ */
+
+.apoiadores-lista {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    justify-items: center;
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.apoiador-card {
+
+    width: 100%;
+    min-height: 160px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(71, 14, 102, 0.65);
+
+    border: 1px solid #691a93;
+
+    border-radius: 15px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.apoiador-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #c589e6;
+
+    box-shadow: 0 0 15px rgba(197, 137, 230, 0.25);
+}
+
+
+/* ================================
+   IMAGENS
+================================ */
+
+.apoiador-card img {
+
+    max-width: 85%;
+
+    max-height: 90px;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* ================================
+   DESTAQUES
+================================ */
+
+.apoiador-destaque {
+
+    min-height: 190px;
+
+    border: 1px solid rgba(197, 137, 230, 0.8);
+
+    box-shadow:
+        0 0 12px rgba(197, 137, 230, 0.15);
+}
+
+
+.apoiador-destaque img {
+
+    max-width: 90%;
+
+    max-height: 115px;
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media screen and (max-width: 1000px) {
+
+    .apoiadores-destaques {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .apoiadores-lista {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .titulo-apoiadores {
+
+        font-size: 55px;
+
+    }
+
+}
+
+
+/* ================================
+   CELULARES
+================================ */
+
+@media screen and (max-width: 700px) {
+
+    .titulo-apoiadores {
+
+        font-size: 45px;
+
+    }
+
+    .linha-titulo {
+
+        width: 220px;
+
+        margin-bottom: 40px;
+
+    }
+
+    .apoiadores-destaques {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-bottom: 30px;
+
+    }
+
+    .apoiadores-lista {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+    .apoiador-card {
+
+        min-height: 140px;
+
+    }
+
+    .apoiador-destaque {
+
+        min-height: 160px;
+
+    }
+
+}
+
+
+/* ================================
+   CELULARES PEQUENOS
+================================ */
+
+@media screen and (max-width: 450px) {
+
+    .titulo-apoiadores {
+
+        font-size: 38px;
+
+    }
+
+    .linha-titulo {
+
+        width: 180px;
+
+        margin-top: 20px;
+        margin-bottom: 30px;
+
+    }
+
+    .apoiador-card {
+
+        min-height: 125px;
+
+        padding: 20px;
+
+    }
+
+    .apoiador-card img {
+
+        max-height: 75px;
+
+    }
+
+    .apoiador-destaque {
+
+        min-height: 145px;
+
+    }
+
+    .apoiador-destaque img {
+
+        max-height: 90px;
+
+    }
+
+}
