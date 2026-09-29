@@ -581,7 +581,7 @@ footer img {
        em telas menores.
     */
     main {
-        padding-top: 20px;
+        padding-top: 160px;
     }
 
     .dia {
@@ -634,7 +634,7 @@ footer img {
     }
 
     main {
-        padding: 20px 15px 30px;
+        padding: 240px 15px 30px;
     }
 
     .dia {
@@ -680,7 +680,7 @@ footer img {
 
     main {
         padding: 20px 10px 25px;
-    }
+    } /*Alterei esse*/
 
     .dia {
         scroll-margin-top: 400px;
