@@ -661,17 +661,87 @@ footer img {
 
 
 /* ================================
+   TABLETS / CELULARES
+================================ */
+
+@media screen and (max-width: 600px) {
+
+    .nav {
+        flex-direction: column;
+
+        padding: 15px 10px;
+    }
+
+    .nav-logo {
+        width: 100%;
+
+        white-space: normal;
+
+        font-size: 20px;
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+
+    .nav-list {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+    .nav-link {
+        width: 100%;
+
+        min-width: 0;
+
+        font-size: 14px;
+
+        padding: 10px 8px;
+    }
+
+    main {
+        padding: 20px 15px 30px;
+    }
+
+    .dia {
+        scroll-margin-top: 280px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .titulo {
+        font-size: 55px;
+    }
+}
+
+
+/* ================================
    CELULARES PEQUENOS
 ================================ */
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 450px) and (min-width: 350px) {
 
     .nav-list {
         grid-template-columns: 1fr;
     }
 
-    .nav-logo {
-        font-size: 18px;
+    .nav-logo {        font-size: 18px;
     }
 
     .nav-link {
