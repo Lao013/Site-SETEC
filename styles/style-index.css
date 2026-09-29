@@ -18,6 +18,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     min-height: 100vh;
+    
     display: flex;
     flex-direction: column;
 
@@ -580,7 +581,7 @@ footer img {
        em telas menores.
     */
     main {
-        padding-top: 190px;
+        padding-top: 20px;
     }
 
     .dia {
@@ -633,7 +634,7 @@ footer img {
     }
 
     main {
-        padding: 280px 15px 30px;
+        padding: 20px 15px 30px;
     }
 
     .dia {
@@ -678,7 +679,7 @@ footer img {
     }
 
     main {
-        padding: 400px 10px 25px;
+        padding: 20px 10px 25px;
     }
 
     .dia {
