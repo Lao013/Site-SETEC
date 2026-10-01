@@ -439,6 +439,11 @@ td {
     border-radius: 10px;
 }
 
+.dia-titulo-5 {
+    background-color: #691a93;
+    border-radius: 10px;
+}
+
 th i {
     color: #c589e6;
 
@@ -549,6 +554,10 @@ footer img {
     object-fit: contain;
 }
 
+.qrcode {
+    margin: 30px 0 0 0;
+    border-radius: 20px;
+}
 
 /* ================================
    RESPONSIVIDADE
