@@ -1,30 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Cinzel+Decorative:wght@400;700;900&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 .inscricao-title {
     margin: 55px 0 10px 0;
     align-self: center;
 }
 
+.inscr-a{
+    display: block;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 5px;
+    box-shadow: -5px 5px 2px rgba(0, 0, 0, 0.596);
+    transition: transform 0.2s;
+}
+
+.inscr-a:hover{
+    transform: scale(1.05);
+}
+
 /*=========================
-    INSCRIÇÕES ENCERRADAS
+    Resultados
 =========================*/
 
 .inscricao {
     display: grid;
     background-color: antiquewhite;
     border-radius: 10px;
-    box-shadow: -10 10 20 black;
-    height: 100px;
+    box-shadow: -10px 10px 20px black;
+    height: auto;
     width: 50vw;
     padding: 7px;
     margin-bottom: 55px;
     margin-left: 90px;
     justify-self: center;
+    animation: pulsar 2s infinite;
 }
 
 .inscricao-content {
     background-color: rgba(122, 1, 235, 0.205);
     border-radius: 10px;
+    justify-items: center;
+    height: auto;
 }
 
 .inscricao-content strong {
@@ -33,8 +51,90 @@
     font-size: 25px;
 }
 
-
-.inscricao-content p {
+.result-link{ 
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-family: 'Russo One';
     text-decoration: underline;
+    margin-left: 30px;
+}
+
+
+/*===========================
+    INSCRIÇÃO REMANESCENTES
+===========================*/
+
+.inscricao hr{
+    border: 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-image: linear-gradient(to right, transparent, rgba(150, 150, 150), transparent);
+    height: 3px;
+
+}
+
+.inscricao-content h1{
+    padding: 0;
+    margin: 0;
+    font-size: 35px;
+    font-family: 'Russo One';
+    color: purple;
+}
+
+.inscricao-content h2{
+    padding: 0;
+    margin: 0 13px 0 13px;
     font-size: 18px;
+}
+
+.inscricao-remanescente{
+    display: flex;
+    gap: 8px;
+    background-color: white;
+    width: 100%;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.remanescente-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-left: 18px;
+    font-family: "Russo One";
+    font-weight: 20px;
+    font-size: 20px;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0 10px 28px;
+}
+
+
+.inscricao-remanescente img{
+    height: auto;
+    width: 100px;
+    margin-right: 10px;
+}
+
+/*=====================
+    BORDA PULSANTE
+=====================*/
+
+@keyframes pulsar {
+    0% {
+        /* No início, a sombra está colada no botão e totalmente visível */
+        box-shadow: 0 0 0 0 rgba(98, 0, 238, 0.7), -10px 10px 20px black;
+    }
+
+    70% {
+        /* No meio do caminho, a sombra se expande para 20px e começa a sumir */
+        box-shadow: 0 0 0 20px rgba(98, 0, 238, 0), -10px 10px 20px black;
+    }
+
+    100% {
+        /* No final, a sombra zera o tamanho para reiniciar o ciclo suavemente */
+        box-shadow: 0 0 0 0 rgba(98, 0, 238, 0), -10px 10px 20px black;
+    }
 }
