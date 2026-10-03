@@ -26,39 +26,36 @@
 
 .inscricao {
     display: grid;
+    width: 90%;
+    max-width: 550px;
+    padding: 7px;
+    margin: 0 auto 55px auto;
     background-color: antiquewhite;
     border-radius: 10px;
     box-shadow: -10px 10px 20px black;
-    height: auto;
-    width: 50vw;
-    padding: 7px;
-    margin-bottom: 55px;
-    margin-left: 90px;
-    justify-self: center;
     animation: pulsar 2s infinite;
 }
 
 .inscricao-content {
     background-color: rgba(122, 1, 235, 0.205);
     border-radius: 10px;
-    justify-items: center;
     height: auto;
+    text-align: center;
 }
 
 .inscricao-content strong {
     color: black;
-    font-family: "Comic neue";
+    font-family: "Comic Neue";
     font-size: 25px;
 }
 
-.result-link{ 
-    width: 90%;
+.result-link {
+    width: calc(100% - 20px);
     padding: 10px;
-    margin: 10px;
+    margin: 10px auto;
     font-size: 20px;
-    font-family: 'Russo One';
+    font-family: "Russo One";
     text-decoration: underline;
-    margin-left: 30px;
 }
 
 
@@ -87,35 +84,46 @@
     padding: 0;
     margin: 0 13px 0 13px;
     font-size: 18px;
+    color: purple;
 }
 
-.inscricao-remanescente{
+.inscricao-remanescente {
     display: flex;
-    gap: 8px;
-    background-color: white;
+    align-items: center;
+    gap: 10px;
     width: 100%;
-    border-radius: 0px 0px 5px 5px;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
 }
 
-.remanescente-link{
+.remanescente-link {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    margin-left: 18px;
-    font-family: "Russo One";
-    font-weight: 20px;
-    font-size: 20px;
-    align-items: center;
+    margin: 10px;
     padding: 10px;
-    margin: 10px 0 10px 28px;
+    font-family: "Russo One";
+    font-size: 20px;
+}
+
+.inscricao-remanescente img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
 }
 
 
-.inscricao-remanescente img{
-    height: auto;
-    width: 100px;
-    margin-right: 10px;
+.inscricao-remanescente {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+
+    background-color: white;
+
+    border-radius: 0 0 5px 5px;
 }
 
 /*=====================
@@ -136,5 +144,52 @@
     100% {
         /* No final, a sombra zera o tamanho para reiniciar o ciclo suavemente */
         box-shadow: 0 0 0 0 rgba(98, 0, 238, 0), -10px 10px 20px black;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .inscricao {
+        width: 100%;
+        max-width: 500px;
+
+        margin: 0 auto 40px;
+    }
+
+    .inscricao-remanescente {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .remanescente-link {
+        width: 100%;
+        margin: 0;
+
+        font-size: 16px;
+    }
+
+    .inscricao-remanescente img {
+        width: 100px;
+        margin: 5px auto;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .inscricao {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .inscricao-content h1 {
+        font-size: 28px;
+    }
+
+    .inscricao-content h2 {
+        font-size: 16px;
+    }
+
+    .inscricao-content strong {
+        font-size: 20px;
     }
 }
