@@ -16,12 +16,13 @@ Criar uma página web para apresentar as informações da SETEC 2026 de maneira 
 O sistema permite consultar:
 
 - 📅 Programação do evento
-- 🗓️ Atividades organizadas por dia
+- 🗓️ Palestras e atividades organizadas por dia
+- 🗓️ Minicursos organizados por dia e horário
 - 🎤 Palestrantes
-- 🎁 Brindes
 - 👥 Equipe responsável
 - 🤝 Apoiadores
 - 🔗 Links e informações relacionadas ao evento
+- 🔗 Lista de inscritos dos minicursos
 
 ---
 
