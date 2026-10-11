@@ -47,5 +47,6 @@ O desenvolvimento do site da **XXIII SETEC 2026 — FATEC Sorocaba** foi realiza
 - **Júlia Ribeiro**
 - **Guilherme Lao**
 - **Alexandra Oliveira**
+- **Sofia Oliveira**
 
 ---
